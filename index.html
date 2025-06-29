@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Favicon for browser -->
+  <link rel="icon" type="image/png" href="user.png" />
+
+  <!-- High-res icon for mobile / PWA -->
+  <link rel="apple-touch-icon" sizes="512x512" href="user.png" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="glass-container">
+      <img src="profile.jpg" alt="Siva's Photo" class="profile-img" />
+      <h1>Hi, I'm <span>Sivalingam Perla</span></h1>
+      <h2> Python Full Stack Developer</h2>
+      <p>Focused on building full-stack web applications using Django and Python. Passionate about solving real-world problems through clean code and innovative design.</p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="resume.pdf.jpg" download class="btn-download">Download Resume</a>
+
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate and dedicated Full Stack Developer with expertise in Python and Django. I enjoy building clean, efficient, and user-friendly web applications. With a solid foundation in HTML, CSS, and backend development, I am comfortable working across the full development cycle — from designing front-end interfaces to building scalable back-end systems. I'm always eager to learn new technologies and contribute to impactful projects.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+      <li>Django REST Framework</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JAVASCRIPT</li>
+      <li>SQL</li>
+      <li>Git & GitHub</li>
+      <li>Postman</li>
+    </ul>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Upcycling Platform</h3>
+      <p>🧺 Upcycling Exchange Platform – A social-impact web app that helps communities donate unused items to those in need, reducing waste and promoting sustainability.</p>
+    </div>
+    <div class="project-card">
+      <h3>CampusConnect</h3>
+      <p>🎓 CampusConnect – A complete college portal where students, faculty, and departments manage academic information seamlessly, improving communication and organization on campus.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+
+     <h2>Looking for Opportunities</h2>
+  <p>
+    I am currently seeking opportunities as a <strong>Python Developer</strong>,
+    <strong>Django Developer</strong>, or <strong>Full Stack Developer</strong>.
+    I have hands-on experience and have mastered the required technologies. If
+    there are any vacancies or freelance opportunities available, please feel
+    free to contact me. I would be happy to contribute my skills to your team
+    or project. You can reach me via email — I look forward to hearing from you.
+  </p>
+
+    <h2>Contact Me</h2>
+
+    <form id="contact-form">
+      <input type="text"  name="from_name" placeholder="Your Name" required />
+      <input type="email" name="reply_to" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p id="response-message" style="margin-top:10px;"></p>
+
+    <div class="socials">
+      <a href="https://github.com/sivalingamperla123/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+             alt="GitHub" class="social-icon" />
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/sivalingamperla/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+             alt="LinkedIn" class="social-icon" />
+        LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sivalingam Perla. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("PL4c9WDfk4IDXwqPK"); // Your public key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_i0efvgg", "template_ftb9uvj", this)
+        .then(function() {
+          document.getElementById("response-message").textContent = "✅ Message sent successfully!";
+        }, function(error) {
+          document.getElementById("response-message").textContent = "❌ Failed to send message.";
+          console.error("EmailJS error:", error);
+        });
+
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

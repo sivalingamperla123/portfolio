@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+header.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #1f1f1f, #0f0f0f);
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.glass-container h1 span {
+  color: #00ffff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: #00ffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00cccc;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #00ffff;
+  border-radius: 20px;
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.project-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #00ffff;
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 20px;
+  background: #1a1a1a;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2cm;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+  background: #00ffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+  background: #00cccc;
+}
+
+/* --- DOWNLOAD BUTTON --- */
+.btn-download {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: #00ffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.btn-download:hover {
+  background: #00cccc;
+  transform: scale(1.05);
+}
+
+/* --- CONTACT FORM --- */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #00ffff;
+  border-radius: 10px;
+  background: rgba(0, 255, 255, 0.05);
+  color: #fff;
+  font-size: 16px;
+}
+
+form button.btn {
+  align-self: center;
+}
+
+/* --- SOCIAL ICON LINKS --- */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.socials a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #00cccc;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
